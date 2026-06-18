@@ -1,0 +1,358 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serene Jewels | Squish. Stack. Shine.</title>
+    <meta
+      name="description"
+      content="Shop colorful beaded bracelets, keychains, and matching accessories from Serene Jewels."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Serene Jewels home">
+          <span class="brand-mark" aria-hidden="true">SJ</span>
+          <span>Serene Jewels</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#shop">Shop</a>
+          <a href="#about">About</a>
+          <a href="#care">Care</a>
+          <a href="#customer-care">Customer Care</a>
+          <a href="#feedback">Feedback</a>
+        </div>
+        <div class="nav-actions" aria-label="Shop actions">
+          <button class="account-button" type="button" data-open-account aria-label="Open account">
+            <span id="accountLabel">Login</span>
+          </button>
+          <button class="icon-button" type="button" data-open-wishlist aria-label="Open wishlist">
+            <span aria-hidden="true">&#9825;</span>
+            <span class="count-pill" id="wishCount">0</span>
+          </button>
+          <button class="cart-button" type="button" data-open-cart aria-label="Open cart">
+            <span aria-hidden="true">Bag</span>
+            <span class="count-pill" id="cartCount">0</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">New drop: Serene Pop stacks</p>
+          <h1 id="heroTitle">Stack It Up, Shine It Out</h1>
+          <p>
+            Candy-colored beaded bracelets, charm add-ons, rings, anklets, and kits made for mixing,
+            gifting, and wearing on repeat.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#shop">Shop the Drop</a>
+          </div>
+          <div class="trust-row" aria-label="Store benefits">
+            <span>Free shipping ₹3,309+</span>
+            <span>Gift notes</span>
+            <span>Stack rewards</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="assets/hero-wearing-bracelet.png" alt="Woman wearing a colorful beaded bracelet at a bright desk" />
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Brand highlights">
+        <span>Squish. Stack. Shine.</span>
+        <span>Stretchy, stackable, smile-inducing</span>
+        <span>Wear the wiggle</span>
+      </section>
+
+      <section class="section" id="shop" aria-labelledby="shopTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Bestsellers</p>
+            <h2 id="shopTitle">Shop the Collection</h2>
+          </div>
+          <div class="shop-tools">
+            <label>
+              <span>Filter</span>
+              <select id="filterSelect">
+                <option value="all">Everything cute</option>
+                <option value="bracelet">Bracelets</option>
+                <option value="keychain">Keychains</option>
+                <option value="necklace">Necklaces</option>
+              </select>
+            </label>
+            <label>
+              <span>Sort</span>
+              <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="low">Price: low to high</option>
+                <option value="high">Price: high to low</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="color-filters" aria-label="Filter by color">
+          <button type="button" class="swatch active" data-color="all" style="--swatch: linear-gradient(135deg,#ff7abd,#9ee9d7,#ffe27a)" aria-label="All colors"></button>
+          <button type="button" class="swatch" data-color="pink" style="--swatch:#ff7abd" aria-label="Pink"></button>
+          <button type="button" class="swatch" data-color="lilac" style="--swatch:#c9a7ff" aria-label="Lilac"></button>
+          <button type="button" class="swatch" data-color="mint" style="--swatch:#9ee9d7" aria-label="Mint"></button>
+          <button type="button" class="swatch" data-color="yellow" style="--swatch:#ffe27a" aria-label="Yellow"></button>
+          <button type="button" class="swatch" data-color="blue" style="--swatch:#8ed6ff" aria-label="Blue"></button>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="detail-band" id="product" aria-labelledby="detailTitle">
+        <div class="gallery">
+          <img class="gallery-main" src="assets/pearl-bloom-keychain.png" alt="Pearl Bloom Keychain with colorful beads and charms" />
+          <button type="button" class="zoom-chip" id="zoomButton">Bead-detail zoom</button>
+          <div class="gallery-thumbs" aria-label="Product images">
+            <img src="assets/pearl-bloom-keychain.png" alt="Pearl Bloom Keychain product photo" />
+          </div>
+        </div>
+        <div class="product-panel">
+          <p class="eyebrow">Product detail</p>
+          <h2 id="detailTitle">Pearl Bloom Keychain</h2>
+          <p class="price" id="detailPrice">₹1,513</p>
+          <p id="detailDescription">A dreamy beaded keychain with pearl shine, colorful beads, flower details, and a silver clip for bags, keys, or gifting.</p>
+          <button class="button button-primary wide" type="button" data-add-id="pearl-bloom-keychain" id="detailAddButton">Add to Cart</button>
+        </div>
+      </section>
+
+      <section class="section split" id="about" aria-labelledby="aboutTitle">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2 id="aboutTitle">Tiny beads, big mood</h2>
+          <p>
+            Serene Jewels started with one rule: accessories should feel as fun to pick as they are to wear.
+            We make affordable, collectible stacks for birthdays, school days, festivals, and tiny treat-yourself moments.
+          </p>
+        </div>
+        <div class="mission-list">
+          <p><strong>Inclusive sizing</strong><span>Easy-fit stretch and custom sizes.</span></p>
+          <p><strong>Gift-ready</strong><span>Notes, wrap, and stack bundles.</span></p>
+          <p><strong>Low-waste drops</strong><span>Small batches and reusable bead trays.</span></p>
+        </div>
+      </section>
+
+      <section class="section faq" id="care" aria-labelledby="careTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FAQ / Care guide</p>
+            <h2 id="careTitle">Keep the shine happy</h2>
+          </div>
+        </div>
+        <details open>
+          <summary>How do I size my bracelet?</summary>
+          <p>Measure your wrist, add a half inch for comfort, and message us if you want a custom fit.</p>
+        </details>
+        <details>
+          <summary>Can the beads get wet?</summary>
+          <p>A splash is fine. For longer shine, take them off before swimming, lotions, or heavy perfume.</p>
+        </details>
+        <details>
+          <summary>What are shipping and returns like?</summary>
+          <p>Orders ship in 2-4 business days. Unworn ready-made pieces can be returned within 21 days.</p>
+        </details>
+        <details open id="customer-care">
+          <summary>Customer care number</summary>
+          <p>Call or WhatsApp us at <a href="tel:+916003452478">+91 6003452478</a>.</p>
+        </details>
+      </section>
+
+      <section class="section feedback" id="feedback" aria-labelledby="feedbackTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Customer feedback</p>
+            <h2 id="feedbackTitle">Tell us your jewel thoughts</h2>
+          </div>
+          <p class="section-note">Leave a quick review for the Pearl Bloom Keychain. Short and sweet is perfect.</p>
+        </div>
+        <div class="feedback-layout">
+          <form class="feedback-form" id="feedbackForm">
+            <label>
+              Your name
+              <input id="feedbackName" name="name" type="text" placeholder="Name or nickname" maxlength="32" required />
+            </label>
+            <label>
+              Rating
+              <select id="feedbackRating" name="rating" required>
+                <option value="5">5 stars - love it</option>
+                <option value="4">4 stars - super cute</option>
+                <option value="3">3 stars - nice</option>
+                <option value="2">2 stars - could be better</option>
+                <option value="1">1 star - not my vibe</option>
+              </select>
+            </label>
+            <label>
+              Feedback
+              <textarea id="feedbackMessage" name="message" rows="4" maxlength="180" placeholder="What did you like?" required></textarea>
+            </label>
+            <button class="button button-primary" type="submit">Send Feedback</button>
+            <p id="feedbackStatus" role="status"></p>
+          </form>
+          <div class="feedback-list" id="feedbackList" aria-live="polite"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <aside class="mini-cart" id="miniCart" aria-label="Shopping cart" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>Checkout</h2>
+        <button type="button" class="icon-button" data-close-cart aria-label="Close cart">&times;</button>
+      </div>
+      <ol class="checkout-steps" aria-label="Checkout progress">
+        <li class="active" data-checkout-step="cart">Cart</li>
+        <li data-checkout-step="details">Order details</li>
+        <li data-checkout-step="payment">Payment</li>
+        <li data-checkout-step="confirmation">Confirmation</li>
+      </ol>
+      <section class="checkout-panel active" data-checkout-panel="cart" aria-labelledby="cartStepTitle">
+        <h3 id="cartStepTitle">Your Stack Bag</h3>
+        <div id="cartItems" class="drawer-list"></div>
+        <label class="gift-toggle"><input type="checkbox" id="giftWrap" /> Add gift wrap + note (₹378)</label>
+        <label>
+          Gift note
+          <textarea id="giftNote" rows="3" placeholder="Write something sweet..."></textarea>
+        </label>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">₹0</strong>
+        </div>
+        <button class="button button-primary wide" type="button" id="cartNextButton">Continue to Details</button>
+      </section>
+      <form class="customer-info checkout-panel" id="customerInfoForm" data-checkout-panel="details">
+        <h3>Customer information</h3>
+        <label>
+          Full name
+          <input id="customerName" name="customerName" type="text" placeholder="Your name" autocomplete="name" required />
+        </label>
+        <label>
+          Email ID
+          <input id="customerEmail" name="customerEmail" type="email" placeholder="you@example.com" autocomplete="email" required />
+        </label>
+        <label>
+          State
+          <input id="customerState" name="customerState" type="text" placeholder="State" autocomplete="address-level1" required />
+        </label>
+        <label>
+          Area / city
+          <input id="customerArea" name="customerArea" type="text" placeholder="Area or city" autocomplete="address-level2" required />
+        </label>
+        <label>
+          Address / landmark
+          <textarea id="customerAddress" name="customerAddress" rows="3" placeholder="House, street, landmark" autocomplete="street-address" required></textarea>
+        </label>
+        <p id="customerInfoStatus" role="status"></p>
+        <div class="checkout-actions">
+          <button class="button button-soft" type="button" id="orderBackButton">Back to Cart</button>
+          <button class="button button-primary" type="submit">Continue to Payment</button>
+        </div>
+      </form>
+      <section class="checkout-panel" data-checkout-panel="payment" aria-labelledby="paymentStepTitle">
+        <form class="payment-flow" id="paymentProofForm">
+          <h3 id="paymentStepTitle">Payment page</h3>
+          <p class="order-reference">Order reference: <strong id="orderRefDisplay">SJ-PENDING</strong></p>
+          <div class="payment-instructions" id="upiPaymentBox">
+            <h4>Pay by UPI</h4>
+            <p>Send the exact total to this UPI ID, then add your transaction ID and screenshot below.</p>
+            <div class="upi-copy-row">
+              <input id="upiIdField" type="text" value="zamanyeasmin5@oksbi" readonly />
+              <button class="button button-soft" type="button" id="copyUpiButton">Copy</button>
+            </div>
+            <a class="upi-qr-link" id="upiQrLink" href="upi://pay?pa=zamanyeasmin5%40oksbi&pn=Serene%20Jewels&cu=INR&tn=Serene%20Jewels%20order%20payment" rel="noopener" aria-label="Open this UPI QR payment in your UPI app">
+              <img class="upi-qr" src="assets/upi-payment-qr.png" alt="UPI payment QR code for Serene Jewels" />
+            </a>
+            <a class="button button-primary wide" id="upiPayButton" href="upi://pay?pa=zamanyeasmin5%40oksbi&pn=Serene%20Jewels&cu=INR&tn=Serene%20Jewels%20order%20payment" rel="noopener">Open UPI App</a>
+            <p class="tiny-note">For best results, scan this QR from any UPI app scanner. On mobile, tap the QR or button to open your UPI app.</p>
+          </div>
+          <label>
+            Transaction ID
+            <input id="transactionId" name="transactionId" type="text" placeholder="UPI transaction ID" required />
+          </label>
+          <label>
+            Payment screenshot
+            <input id="paymentScreenshot" name="paymentScreenshot" type="file" accept="image/*" required />
+          </label>
+          <p id="paymentStatus" role="status"></p>
+          <div class="checkout-actions">
+            <button class="button button-soft" type="button" id="paymentBackButton">Back to Details</button>
+            <button class="button button-primary" type="submit">Submit Payment Proof</button>
+          </div>
+        </form>
+      </section>
+      <section class="checkout-panel confirmation-panel" data-checkout-panel="confirmation" aria-labelledby="confirmationTitle">
+        <h3 id="confirmationTitle">Order submitted</h3>
+        <p id="confirmationMessage">Your order will be locked in after payment proof is sent for verification.</p>
+        <div class="confirmation-card">
+          <span>Order reference</span>
+          <strong id="confirmationOrderRef">SJ-PENDING</strong>
+        </div>
+        <p class="tiny-note">Static sites cannot attach screenshots automatically. Please attach the selected payment screenshot before sending the email, or send it on WhatsApp with your order reference.</p>
+        <div class="checkout-actions">
+          <a class="button button-soft" href="https://wa.me/916003452478" target="_blank" rel="noopener">WhatsApp Care</a>
+          <button class="button button-primary" type="button" id="emailOrderButton">Send Order Email</button>
+        </div>
+        <p class="tiny-note">Instagram fallback: @serene._jewels</p>
+      </section>
+    </aside>
+    <aside class="favorites-drawer" id="favoritesDrawer" aria-label="Favorite products" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>Your Favorites</h2>
+        <button type="button" class="icon-button" data-close-favorites aria-label="Close favorites">&times;</button>
+      </div>
+      <div id="favoriteItems" class="drawer-list"></div>
+    </aside>
+    <aside class="account-drawer" id="accountDrawer" aria-label="Customer account" aria-hidden="true">
+      <div class="drawer-header">
+        <h2>Your Account</h2>
+        <button type="button" class="icon-button" data-close-account aria-label="Close account">&times;</button>
+      </div>
+      <form class="customer-info" id="accountForm">
+        <h3>Remember me</h3>
+        <p class="account-note">Save your details once. We will remember you next time and fill checkout faster.</p>
+        <label>
+          Full name
+          <input id="accountName" name="customerName" type="text" placeholder="Your name" autocomplete="name" required />
+        </label>
+        <label>
+          Email ID
+          <input id="accountEmail" name="customerEmail" type="email" placeholder="you@example.com" autocomplete="email" required />
+        </label>
+        <label>
+          State
+          <input id="accountState" name="customerState" type="text" placeholder="State" autocomplete="address-level1" />
+        </label>
+        <label>
+          Area / city
+          <input id="accountArea" name="customerArea" type="text" placeholder="Area or city" autocomplete="address-level2" />
+        </label>
+        <label>
+          Address / landmark
+          <textarea id="accountAddress" name="customerAddress" rows="3" placeholder="House, street, landmark" autocomplete="street-address"></textarea>
+        </label>
+        <button class="button button-primary wide" type="submit">Save Login</button>
+        <button class="button button-soft wide" type="button" id="logoutButton">Forget Me</button>
+        <p id="accountStatus" role="status"></p>
+      </form>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
